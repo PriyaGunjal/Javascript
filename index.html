@@ -26,21 +26,15 @@
             <input class="btn" type="submit" value="submit">
 
         </form>
-        <ul id="users"></ul>
+    <!-- <ul id="users"></ul>
        <ul class="items">
             <li class="item">Item 1</li>
             <li class="item">Item 2</li>
             <li class="item">Item 3</li>
-        </ul>
+        </ul>-->
     </section>
-    <script>
-        function saveToLocalStorage(event){
-    event.preventDefault();
-    const name=event.target.name.value;
-    const email=event.target.email.value;
-    localStorage.setItem('name',name);
-    localStorage.setItem('email',email);
-}
-    </script>
+    <ul id='listOfUsers'></ul>
+    <script src="UserList.js">
+        </script>
 </body>
 </html>
