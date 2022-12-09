@@ -1,0 +1,20 @@
+<script>
+
+    var student={name:"Ram"};
+    var studentInfo=function(id,age){
+        console.log("name "+this.name+" id "+id+" age "+age);
+    }
+
+   studentInfo.call(student,101,20);
+  
+   var newStudent={name:"Shyam"};
+    var arr=[102,30];
+    
+    studentInfo.apply(newStudent,arr);
+
+    var stud={name:"Mahesh"};
+    let newStudInfo=studentInfo.bind(stud,103,25);
+    console.log(newStudInfo);
+
+    newStudInfo();
+</script>

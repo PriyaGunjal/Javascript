@@ -1,0 +1,24 @@
+<script>
+// currying
+
+let multiply=function(x,y){
+        console.log(x*y);
+    }
+
+    let multiplyByTwo=multiply.bind(this,2);
+    multiplyByTwo(5);
+
+    let multiplyByThree=multiply.bind(this);
+    multiplyByThree(2,3);
+
+//function currying
+
+let addition=function(a){
+    return function(b){
+        console.log(a+b);
+    }
+}
+
+let newAddition=addition(2);
+newAddition(3);
+</script>
