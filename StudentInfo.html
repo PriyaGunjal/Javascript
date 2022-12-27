@@ -1,0 +1,30 @@
+<script>
+    class Student{
+        constructor(name,age,marks){
+            this.name=name;
+            this.age=age;
+            this.marks=marks;
+        }
+    
+    setPlacementAge(minPlacementAge){
+        return(minmarks)=>{
+            if(this.marks>minmarks && this.age>minPlacementAge){
+                console.log(this.name+" is ready for placement");
+            }
+            else{
+                console.log(this.name+" is not ready  for placement");
+            }
+        }
+    }
+}
+    const Ram=new Student('Ram',25,75);
+    const Shyam=new Student('Shyam',13,35);
+    const Mahesh=new Student('Mahesh',18,40);
+    const Urvish=new Student('Urvish',20,75);
+    const Sujal=new Student('Sujal',40,85);
+    Ram.setPlacementAge(18)(40);
+    Shyam.setPlacementAge(18)(40);
+    Mahesh.setPlacementAge(18)(40);
+    Urvish.setPlacementAge(18)(40);
+    Sujal.setPlacementAge(18)(40);
+</script>
