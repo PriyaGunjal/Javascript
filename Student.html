@@ -1,0 +1,35 @@
+<script>
+class Student{
+    static count=0;
+    constructor(name,age,ph_no,marks){
+        this.name=name;
+        this.age=age;
+        this.ph_no=ph_no;
+        this.marks=marks;
+        Student.countStudent();
+    }
+    static countStudent(){
+        return(Student.count++);
+    }
+    elligible(){
+        if(this.marks>=40){
+            console.log(`${this.name} age ${this.age} is elligible`);
+        }
+        else if(this.marks<40){
+            console.log(`${this.name} age ${this.age} is not elligible`);
+        }
+    }
+}
+const Ram=new Student('Ram',18,1234,34);
+const Shyam=new Student('Shyam',15,2345,35);
+const Mahesh=new Student('Mahesh',16,4567,60);
+const Urvish=new Student('Urvish',17,2356,70);
+const Sujal=new Student('Sujal',19,5468,30);
+console.log(Student.countStudent());
+Ram.elligible();
+Shyam.elligible();
+Mahesh.elligible();
+Urvish.elligible();
+Sujal.elligible();
+
+</script>
