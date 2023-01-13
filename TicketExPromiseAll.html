@@ -1,0 +1,31 @@
+<script>
+//program TicketEx2 is looks very ugly so use async await
+console.log('Person1:shows Ticket');
+console.log('Person2:shows Ticket');
+const preMovie=async()=>{ 
+    const promiseWifeBringingTicks=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('ticket');
+    },3000)
+})
+
+const getPopcorn=new Promise((resolve,reject)=>
+resolve('Popcorn'));
+
+const addButter=new Promise((resolve,reject)=>
+resolve('Butter'));
+
+const getColdDrink=new Promise((resolve,reject)=>
+resolve('ColdDrink'));
+
+let ticket=await promiseWifeBringingTicks;
+
+let [Popcorn,Butter,ColdDrink]=await Promise.all([getPopcorn,addButter,getColdDrink])
+console.log(`${Popcorn},${Butter},${ColdDrink}`)
+return ticket;
+}
+preMovie().then((m)=>console.log(`Person3:shows ${m}`));
+   
+console.log('Person4:shows Ticket');
+console.log('Person5:shows Ticket');
+</script>

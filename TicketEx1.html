@@ -1,0 +1,15 @@
+<script>
+//program for dont use async await
+console.log('Person1:shows Ticket');
+console.log('Person2:shows Ticket');
+const promiseWifeBringingTicks=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('ticket');
+    },3000)
+})
+promiseWifeBringingTicks.then((t)=>{
+    console.log(`Person3:shows${t}`)
+})
+console.log('Person4:shows Ticket');
+console.log('Person5:shows Ticket');
+</script>
